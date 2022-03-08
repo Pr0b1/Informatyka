@@ -5,19 +5,20 @@ using namespace std;
 
 int main()
 {
-    int liczba;
-    cout << "Podaj liczbę by sprawdzić czy jest liczbą pierwszą: " << endl;
-    cin >> liczba;
-    for (int i = 2; liczba%i==0; i++) {
-        int wynik = liczba % i;
-        if (wynik != 0) {
-            
-        }
-        if (wynik == 0) {
-            cout << liczba << " jest liczbą pierwszą!";
-            break;
-        }
-    }
+	int n; int lp = 0; int p = 2; int d = 1;
+	cout << "Ile liczb pierwszych chcesz wygenerować?: " << endl;
+	cin >> n; cout << endl;
+	while (lp < n) {
+		if (p % d == 0) {
+			d++;
+		}
+		if (p % d != 0) {
+			cout << p << endl;
+			lp++;  d = 1;
+		}
+		p++;
+	}
+
 }
 
 
