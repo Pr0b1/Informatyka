@@ -9,14 +9,17 @@ int main()
 	cout << "Ile liczb pierwszych chcesz wygenerować?: " << endl;
 	cin >> n; cout << endl;
 	while (lp < n) {
+		for (d = 1; lp <= n; p++) {
 		if (p % d == 0) {
-			d++;
-		}
+					d++;
+				}
 		if (p % d != 0) {
 			cout << p << endl;
 			lp++;  d = 1;
-		}
+				}
 		p++;
+		}
+		
 	}
 
 }
